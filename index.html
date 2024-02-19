@@ -33,6 +33,7 @@ The goal of this code is to create an app that can help individuals figure out i
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	// I created two new variables in coldPercent and allergyPercent in order to get the final values of the allergy count and cold count in relation to the total number of questions.
 	var coldPercent = 0;
 	var allergyPercent = 0;
 
@@ -46,6 +47,7 @@ The goal of this code is to create an app that can help individuals figure out i
         	cold_count = cold_count + 1;
         }
 
+	//This function calculates cold percent and allergy percent, then shows the results inside the p tag
 	function displayResults(){
 		coldPercent = cold_count/4 * 100;
 		allergyPercent = allergy_count/4 * 100;
@@ -99,6 +101,7 @@ The goal of this code is to create an app that can help individuals figure out i
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p> 
+<!-- For this question I typed, "Are your eyes watery or itchy?" into the p tag and then made my two buttons that added to allergyAdd if the answer is yes or coldAdd if the answer is no. Along with this, clicking the button would also take you to page two. -->
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
@@ -111,6 +114,7 @@ The goal of this code is to create an app that can help individuals figure out i
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
+<!-- For this question I typed, "Do you have a fever?" into the p tag and then made my two buttons that added to allergyAdd if the answer is no or coldAdd if the answer is yes. Along with this, clicking the button would also take you to page three. -->
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
@@ -123,6 +127,7 @@ The goal of this code is to create an app that can help individuals figure out i
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
+<!-- For this question I typed, "Do you have a sore throat?" into the p tag and then made my two buttons that added to allergyAdd if the answer is no or coldAdd if the answer is yes. Along with this, clicking the button would also take you to page four. -->
 		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
@@ -135,12 +140,14 @@ The goal of this code is to create an app that can help individuals figure out i
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
+<!-- For this question I typed, "Are your symptoms seasonal or chronic?" into the p tag and then made my two buttons that added to allergyAdd if the answer is yes or coldAdd if the answer is no. Along with this, clicking the button would also take you to page five. -->
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
+<!-- For this last page, I made the header, "Time for your results!" and then placed the results id into the p tag. Along with this, I made a button that ran my displayResults function in order to get the percentages of your selections at the end of the questionnaire -->
 		<h1>Time for your results!</h1>
 	</div>
 	
